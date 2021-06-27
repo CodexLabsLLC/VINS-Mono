@@ -44,14 +44,14 @@ extrinsicTranslation: !!opencv-matrix
    rows: 3
    cols: 1
    dt: d
-   data: [0.0, 0.0, 0.0] 
+   data: [0.35, 0.0, 0.0] 
       #[ 1.4730549437149368e-01, 1.4721604006419201e-01,
       # -2.1798165652046156e-01 ]
 #feature traker paprameters
-max_cnt: 100            # max feature number in feature tracking
+max_cnt: 150            # max feature number in feature tracking
 min_dist: 20            # min distance between two features 
-freq: 0                # frequence (Hz) of publish tracking result. At least 10Hz for good estimation. If set 0, the frequence will be same as raw image 
-F_threshold: 0.1        # ransac threshold (pixel)
+freq: 15                # frequence (Hz) of publish tracking result. At least 10Hz for good estimation. If set 0, the frequence will be same as raw image 
+F_threshold: 1.0        # ransac threshold (pixel)
 show_track: 1           # publish tracking image as topic
 equalize: 1             # if image is too dark or light, trun on equalize to find enough features
 fisheye: 0              # if using fisheye, trun on it. A circle mask will be loaded to remove edge noisy points
@@ -76,7 +76,7 @@ pose_graph_save_path: "/home/shaozu/output/pose_graph/" # save and load path
 
 #unsynchronization parameters
 estimate_td: 1                      # online estimate time offset between camera and imu
-td: 0.01                             # initial value of time offset. unit: s. readed image clock + td = real image clock (IMU clock)
+td: 0.0                             # initial value of time offset. unit: s. readed image clock + td = real image clock (IMU clock)
 
 #rolling shutter parameters
 rolling_shutter: 0                  # 0: global shutter camera, 1: rolling shutter camera
