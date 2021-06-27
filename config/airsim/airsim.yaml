@@ -31,11 +31,15 @@ extrinsicRotation: !!opencv-matrix
    rows: 3
    cols: 3
    dt: d
-   data: [ 1.4027687073847606e-03, -2.1699298805243850e-02,
-       9.9976355838333819e-01, 9.9985464068194618e-01,
-       -1.6957630583451788e-02, -1.7709522217476681e-03,
-       1.6992049515291485e-02, 9.9962071767063532e-01,
-       2.1672356976433327e-02 ]
+   data: [0,0,1,
+          1,0,0,
+          0,1,0]
+      
+      #[ 1.4027687073847606e-03, -2.1699298805243850e-02,
+      # 9.9976355838333819e-01, 9.9985464068194618e-01,
+      # -1.6957630583451788e-02, -1.7709522217476681e-03,
+      # 1.6992049515291485e-02, 9.9962071767063532e-01,
+      # 2.1672356976433327e-02 ]
 extrinsicTranslation: !!opencv-matrix
    rows: 3
    cols: 1
@@ -45,7 +49,7 @@ extrinsicTranslation: !!opencv-matrix
       # -2.1798165652046156e-01 ]
 #feature traker paprameters
 max_cnt: 150            # max feature number in feature tracking
-min_dist: 20            # min distance between two features 
+min_dist: 25            # min distance between two features 
 freq: 0                # frequence (Hz) of publish tracking result. At least 10Hz for good estimation. If set 0, the frequence will be same as raw image 
 F_threshold: 0.9        # ransac threshold (pixel)
 show_track: 1           # publish tracking image as topic
