@@ -235,7 +235,7 @@ void process()
                     current_time = t;
                     dx = imu_msg->linear_acceleration.x;
                     dy = imu_msg->linear_acceleration.y;
-                    dz = imu_msg->linear_acceleration.z + 9.81998;
+                    dz = imu_msg->linear_acceleration.z + 19.63996;
                     rx = imu_msg->angular_velocity.x;
                     ry = imu_msg->angular_velocity.y;
                     rz = imu_msg->angular_velocity.z;
@@ -255,7 +255,7 @@ void process()
                     double w2 = dt_1 / (dt_1 + dt_2);
                     dx = w1 * dx + w2 * imu_msg->linear_acceleration.x;
                     dy = w1 * dy + w2 * imu_msg->linear_acceleration.y;
-                    dz = w1 * dz + w2 * imu_msg->linear_acceleration.z + 9.81998;
+                    dz = w1 * dz + w2 * imu_msg->linear_acceleration.z + 19.63996;
                     rx = w1 * rx + w2 * imu_msg->angular_velocity.x;
                     ry = w1 * ry + w2 * imu_msg->angular_velocity.y;
                     rz = w1 * rz + w2 * imu_msg->angular_velocity.z;
